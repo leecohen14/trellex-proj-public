@@ -19,7 +19,6 @@
 import blackScreen from './cmps/black-screen.vue'
 import userMsg from './cmps/user-msg.vue'
 import appHeader from './cmps/app-header.vue'
-
 import userProfileMenu from '@/cmps/user-profile-menu.vue'
 
 export default {
