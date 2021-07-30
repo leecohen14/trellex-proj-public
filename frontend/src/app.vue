@@ -14,8 +14,8 @@
 		<router-view />
 	</div>
 </template>
-
 <script>
+
 import blackScreen from './cmps/black-screen.vue'
 import userMsg from './cmps/user-msg.vue'
 import appHeader from './cmps/app-header.vue'
