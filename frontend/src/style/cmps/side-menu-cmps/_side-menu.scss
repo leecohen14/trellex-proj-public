@@ -1,0 +1,171 @@
+.basic-side-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 6px 12px 12px;
+    background-color: white;
+    width: 317px;
+    height: 90vh;
+    top: 40px;
+    right: 0;
+    z-index: 1000;
+    color: $textClr;
+    background-color: $lightgrayBg;
+    > .title {
+        font-family: "segoe-ui-bold";
+        font-size: 18px;
+    }
+
+    .side-menu {
+        display: flex;
+        flex-direction: column;
+        margin: 14px 4px 0 0;
+        justify-content: left;
+        padding: 6px 0;
+
+        > button {
+            justify-content: left;
+            color: #172b4d;
+            font-weight: 600;
+            padding: 0px 10px;
+            margin-bottom: 10px;
+            font-size: 14px !important;
+            height: unset;
+            @include hover-supported {
+                background-color: rgba(9, 30, 66, 0.08);
+                border-radius: 3px;
+            }
+
+            &.change-bg-btn {
+                padding: 10px 13px;
+                margin-bottom: 0;
+                .blue-square {
+                    height: 16px;
+                    width: 16px;
+                    background-color: #0079bf;
+                    border-radius: 3px;
+                }
+                > .text {
+                    padding-left: 9px;
+                }
+            }
+
+            &.about-btn {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin-bottom: 0px;
+                > img {
+                    align-self: flex-start;
+                }
+                > .inside-about-btn {
+                    text-align: left;
+                    padding-left: 10px;
+
+                    > span {
+                        :last-child {
+                            font-family: "segoe-ui";
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+        > .board-activity {
+            margin-top: 7px;
+            > .activity-title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                > img {
+                    height: 15px;
+                    padding: 5px 13px 3px 15px;
+                }
+            }
+            > .activities {
+                overflow-y: auto;
+                height: 70vh;
+                > .activity {
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // position: relative;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    height: 50px;
+
+                    .activity-details {
+                        position: relative;
+                        top: -52px;
+                        left: 33px;
+                        margin-left: 10px;
+                        max-width: 250px;
+                        font-size: 14px;
+
+                        .user-fullname {
+                            font-size: 16px;
+                        }
+                    }
+
+                    > :first-child {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 15px;
+                        gap: 15px;
+
+                        > img {
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .back-btn {
+        //     position: relative;
+        //     top: -55px;
+        //     z-index: 44;
+        //     width: 15px;
+        //     margin-right: 5px;
+        //     padding: 0;
+        //     left: 10px;
+        //     img {
+        //         height: 15px;
+        //         width: 30px;
+        //     }
+        //     @include hover-supported {
+        //         background-color: unset;
+        //     }
+        // }
+
+        // .title {
+        //     justify-content: center;
+        //     min-height: 40px;
+        //     padding: 0 32px;
+        //     margin: 0 12px;
+        //     line-height: 40px;
+
+        //     border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+        //     color: #172a4d;
+        // }
+    }
+}
+
+// > .about-btn {
+//     display: flex;
+//     flex-direction: row;
+
+//     > img {
+//         align-self: flex-start;
+//     }
+//     .inside-about-btn {
+//         padding-left: 10px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: start;
+
+//         > p {
+//             font-size: 12px;
+//             color: #5e6c84;
+//         }
+//     }
+// }

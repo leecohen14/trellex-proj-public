@@ -1,0 +1,46 @@
+.labels-summary {
+    .menu {
+        position: absolute;
+        right: 240px;
+        top: 134px;
+    }
+    .sum-h {
+        color: $secondaryTitle;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 6px;
+        padding-top: 2px;
+
+        .label-color {
+            border-radius: 4px;
+            line-height: 32px;
+            height: 32px;
+            min-width: 20px;
+            padding: 0px 12px;
+            margin: 0 4px 4px 0;
+            color: #ffffff;
+            white-space: nowrap;
+        }
+
+        .add-label {
+            display: flex;
+            align-items: center;
+            background-color: rgba(9, 30, 66, 0.04);
+            border-radius: 3px;
+            line-height: 32px;
+            height: 32px;
+            img {
+                filter: invert(6%) sepia(5%) saturate(9407%) hue-rotate(1514.3deg) brightness(0%) contrast(0%);
+            }
+            @include hover-supported {
+                background-color: $secondaryBtnsGray;
+            }
+        }
+    }
+}

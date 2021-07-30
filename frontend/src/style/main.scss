@@ -1,0 +1,68 @@
+// MIXINS
+@import "mixins/basics";
+@import "mixins/inputs";
+@import "mixins/buttons";
+@import "mixins/media";
+
+// BASICS
+@import "basics/variables";
+@import "basics/basics";
+@import "basics/icons";
+
+// CMPS
+@import "cmps/app-header";
+@import "cmps/board-header";
+@import "cmps/group-preview";
+@import "cmps/task-preview";
+@import "cmps/task-quick-edit";
+@import "cmps/black-screen";
+@import "cmps/basic-menu";
+@import "cmps/task-label-preview";
+@import "cmps/user-profile-menu";
+@import "cmps/badges";
+@import "cmps/badges-members";
+@import "cmps/user-msg";
+@import "cmps/statistics";
+@import "cmps/record-cmp";
+@import "cmps/board-chat";
+@import "cmps/invite-menu";
+
+// TASK-DETAILS-CMPS
+@import "cmps/task-details-cmps/side-bar";
+@import "cmps/task-details-cmps/task-activity";
+@import "cmps/task-details-cmps/checklist-preview";
+@import "cmps/task-details-cmps/todos-preview";
+@import "cmps/task-details-cmps/task-desc";
+@import "cmps/task-details-cmps/task-attachments";
+@import "cmps/task-details-cmps/task-title";
+@import "cmps/task-details-cmps/labels-summary";
+@import "cmps/task-details-cmps/members-summary";
+@import "cmps/task-details-cmps/date-summary";
+@import "cmps/task-details-cmps/task-summary-details";
+
+//SIDE-MENU
+@import "cmps/side-menu-cmps/side-menu";
+@import "cmps/side-menu-cmps/side-menu-about";
+@import "cmps/side-menu-cmps/side-menu-background";
+@import "cmps/side-menu-cmps/side-menu-colors";
+@import "cmps/side-menu-cmps/side-menu-photos";
+
+// MENUS-CMPS
+@import "cmps/menus-cmps/attachment-menu";
+@import "cmps/menus-cmps/checklist-menu";
+@import "cmps/menus-cmps/cover-menu";
+@import "cmps/menus-cmps/dates-menu";
+@import "cmps/menus-cmps/labels-menu";
+@import "cmps/menus-cmps/members-menu";
+@import "cmps/menus-cmps/bottom-menu-options";
+@import "cmps/menus-cmps/file-name-menu";
+@import "cmps/menus-cmps/group-top-menu";
+@import "cmps/menus-cmps/boards-menu";
+@import "cmps/menus-cmps/create-board";
+
+// VIEWS
+@import "views/home-page";
+@import "views/board";
+@import "views/task-details";
+@import "views/login";
+@import "views/signup";

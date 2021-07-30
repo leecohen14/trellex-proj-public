@@ -1,0 +1,56 @@
+.date-menu {
+    width: 100%;
+    .btns {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 12px;
+
+        > :first-child {
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        .save-btn {
+            @include primaryBtn;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .remove-btn {
+            background-color: #f5f6f8;
+            color: $textClr;
+
+            text-align: center;
+            border-radius: 3px;
+
+            padding: 9px 12px;
+            margin-top: 0;
+            font-size: 14px;
+
+            transition: all 5ms;
+
+            @include hover-supported {
+                background-color: rgba(9, 30, 66, 0.08);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .mx-datepicker-main {
+        border: none;
+    }
+
+    .mx-btn-current-month,
+    .mx-btn-current-year {
+        font-family: "segoe-ui-bold";
+        font-size: 15px;
+    }
+
+    .mx-calendar {
+        width: 100%;
+    }
+    th {
+        font-family: "segoe-ui-bold";
+        font-size: 13px;
+    }
+}

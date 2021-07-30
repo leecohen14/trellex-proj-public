@@ -1,0 +1,23 @@
+.board-chat-container{
+    .quick-chat-container{
+        height: 550px;
+        width: 350px;
+        position: fixed;
+        top: calc(100vh - 550px);
+        left: calc(100vw - 350px);
+        z-index: 110;
+        .container-message-display{
+            background-image: url('https://res.cloudinary.com/avivcloud/image/upload/v1626896090/login_c2q3at.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        @include mobile-size-content{
+            border-radius: 10px;
+            height: 400px;
+            width: 265px;
+            top: 313px;
+            left: 150px;    
+        }
+    }
+}

@@ -1,0 +1,181 @@
+.badges {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    gap: 6px;
+    color: #6b778c;
+    font-size: 13px;
+    .attach-badge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > img {
+            position: relative;
+            top: 2px;
+        }
+    }
+    .due-later-badge {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        padding: 3px;
+
+        &.due-date-done {
+            color: white;
+            background-color: #61bd4f;
+            border-radius: 3px;
+
+            > img {
+                filter: invert(91%) sepia(100%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(101%);
+            }
+
+            @include hover-supported {
+                background-color: darken(#61bd4f, 10%);
+
+                & > img {
+                    display: none;
+                }
+                &::before {
+                    background-image: url("~@/assets/badges/checklist.svg");
+                    background-size: 15px 15px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    height: 15px;
+                    width: 15px;
+                    content: "";
+                    filter: invert(91%) sepia(100%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(101%);
+
+                    img {
+                        max-width: 5px;
+                        max-height: 5px;
+                    }
+                }
+            }
+        }
+        &.due-date-late {
+            color: white;
+            background-color: #eb5a46;
+            border-radius: 3px;
+
+            > img {
+                filter: invert(91%) sepia(100%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(101%);
+            }
+
+            @include hover-supported {
+                background-color: #b04632;
+
+                > img {
+                    display: none;
+                }
+                &::before {
+                    font-family: icomoon;
+                    content: "\e919";
+                    font-size: 16px;
+
+                    img {
+                        max-width: 5px;
+                        max-height: 5px;
+                    }
+                }
+            }
+        }
+        &.due-date-soon {
+            color: white;
+            background-color: #f2d600;
+            border-radius: 3px;
+
+            > img {
+                filter: invert(91%) sepia(100%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(101%);
+            }
+
+            @include hover-supported {
+                background-color: #d9b51c;
+
+                > img {
+                    display: none;
+                }
+                &::before {
+                    font-family: icomoon;
+                    content: "\e919";
+                    font-size: 16px;
+
+                    img {
+                        max-width: 5px;
+                        max-height: 5px;
+                    }
+                }
+            }
+        }
+
+        @include hover-supported {
+            border-radius: 3px;
+            padding: 3px;
+            cursor: pointer;
+            background-color: #ebecf0;
+
+            > img {
+                display: none;
+            }
+
+            &::before {
+                font-family: icomoon;
+                content: "\e919";
+                font-size: 16px;
+
+                img {
+                    max-width: 5px;
+                    max-height: 5px;
+                }
+            }
+        }
+    }
+    .comments-badge {
+        display: flex;
+        gap: 2px;
+        text-align: center;
+        align-items: center;
+        height: 15px;
+    }
+
+    .checklist-badge {
+        padding: 3px;
+        border-radius: 3px;
+        background-color: transparent;
+        > img {
+            position: relative;
+            top: 2px;
+        }
+        &.done-checklist {
+            color: white;
+            background-color: #61bd4f;
+
+            > img {
+                filter: invert(91%) sepia(100%) saturate(2%) hue-rotate(166deg) brightness(104%) contrast(101%);
+            }
+        }
+    }
+
+    .desc-badge {
+        > img {
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    .watching-badge {
+        > img {
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    img {
+        // display: flex;
+        // flex-direction: row;
+        align-items: center;
+        object-position: center;
+        height: 14px;
+        filter: invert(48%) sepia(13%) saturate(602%) hue-rotate(179deg) brightness(92%) contrast(87%);
+    }
+}

@@ -1,0 +1,134 @@
+.boards-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 280px;
+    padding: 10px;
+    top: 40px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #fff;
+    color: black;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    > .head {
+        display: flex;
+        width: 100%;
+
+        > input {
+            @include primaryInput;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        > .cancel-btn {
+            @include xBtn;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            > img {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    > .body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        gap: 15px;
+
+        h5 {
+            display: flex;
+            align-items: center;
+            padding: 7px 0 3px;
+            margin-left: 12px;
+            color: #5e6c84;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            gap: 8px;
+        }
+        > .stared-container,
+        .recent-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            position: relative;
+            color: $textClr;
+
+            > h5 {
+                > img {
+                    height: 13px;
+                    filter: invert(42%) sepia(9%) saturate(1128%) hue-rotate(179deg) brightness(95%) contrast(86%);
+                }
+            }
+            > .board-mini-preview {
+                display: flex;
+                align-items: center;
+                height: 25px;
+                padding: 5px;
+                gap: 10px;
+                border-radius: 3px;
+                background-position: center;
+                background-size: cover;
+                opacity: 0.8;
+
+                @include hover-supported {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+
+                .filter {
+                    position: absolute;
+                    width: 250px;
+                    height: inherit;
+                    padding: inherit;
+                    right: 0;
+                    background-color: #f8f8f8d2;
+                }
+
+                > img {
+                    position: relative;
+                    border-radius: 3px 0 0 3px;
+                    right: 5px;
+                    width: 45px;
+                    height: 35px;
+                    z-index: 10;
+                }
+
+                > .minibox-color {
+                    position: relative;
+                    border-radius: 3px 0 0 3px;
+                    right: 5px;
+                    width: 45px;
+                    height: 35px;
+                    z-index: 10;
+                }
+
+                > .title {
+                    font-weight: 600;
+                    font-size: 14px;
+                    z-index: 10;
+                }
+            }
+        }
+        > button {
+            width: fit-content;
+            padding: 5px 10px;
+            color: grey;
+            text-decoration: underline;
+
+            @include hover-supported {
+            }
+        }
+    }
+}

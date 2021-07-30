@@ -1,0 +1,220 @@
+html {
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    color: $textClr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+
+    font-family: $mainFontReg;
+
+    // SCROLL BAR
+    // ::-webkit-scrollbar {
+    //     width: 20px;
+    //     height: 20px;
+    // }
+    // ::-webkit-scrollbar-track {
+    //     background-color: transparent;
+    // }
+    // ::-webkit-scrollbar-thumb {
+    //     background-color: #d6dee1;
+    //     border-radius: 20px;
+    // }
+    // ::-webkit-scrollbar-thumb {
+    //     background-color: #d6dee1;
+    //     border-radius: 20px;
+    //     border: 6px solid transparent;
+    //     background-clip: content-box;
+    // }
+
+    ::-webkit-scrollbar {
+        height: 12px;
+        width: 12px;
+
+        @include tablet-size-content {
+            width: 0;
+        }
+    }
+    ::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+    }
+    ::-webkit-scrollbar-button {
+        height: 4px;
+        width: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.425);
+        border-radius: 20px;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.app {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    overflow-x: hidden;
+    // overflow-y: hidden;
+
+    // background-repeat: "no-repeat";
+    // background-size: "cover";
+
+    // > img {
+    //     position: fixed;
+    //     object-fit: cover;
+    //     object-position: center;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: -10;
+    // }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 1rem;
+    margin-bottom: 0;
+    // font-family: GreatVibes, serif;
+    font-weight: 600;
+}
+
+button {
+    background-color: unset;
+    color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+input {
+    color: $textClr;
+    font-family: $mainFontReg;
+}
+
+i {
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    font-family: $mainFontReg;
+    color: $textClr;
+    resize: none;
+}
+
+.group-move {
+    transition: all 0.3s;
+}
+
+// ------- DND --------
+
+.card-ghost {
+    transition: transform 0.18s ease;
+    transform: rotateZ(5deg);
+    // cursor: grabbing;
+}
+.card-ghost-drop {
+    transition: transform 0.18s ease-in-out;
+    transform: rotateZ(0deg);
+}
+
+.outter {
+    margin-right: 7px;
+
+    > .smooth-dnd-drop-preview-constant-class {
+        background-color: rgba(36, 36, 36, 0.308);
+        width: 272px;
+        margin: 0 7px;
+        border-radius: 3px;
+
+        transition: none;
+    }
+}
+
+.tasks-container {
+    > .smooth-dnd-drop-preview-constant-class {
+        background-color: rgba(109, 109, 109, 0.1);
+        min-height: 0px;
+        max-width: calc(100% - 10px);
+        border-radius: 3px;
+    }
+}
+
+.files-container {
+    > .smooth-dnd-drop-preview-constant-class {
+        background-color: rgba(109, 109, 109, 0.1);
+        min-height: 0px;
+        max-width: 656px;
+        border-radius: 3px;
+    }
+}
+
+.smooth-dnd-container {
+    min-height: 15px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+//  ------------
+// Fonts
+@font-face {
+    font-family: roboto-regular;
+    src: url("~@/style/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url("~@/style/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: segoe-ui;
+    src: url("~@/style/fonts/Segoe-UI.ttf");
+}
+@font-face {
+    font-family: segoe-ui-bold;
+    src: url("~@/style/fonts/Segoe-UI-Bold.ttf");
+}
+
+@font-face {
+    font-family: icomoon;
+    src: url("~@/style/fonts/icomoon.ttf");
+}
+
+@font-face {
+    font-family: charlie-semibold;
+    src: url("~@/style/fonts/Charlie-Semibold.woff");
+}
+
+@font-face {
+    font-family: charlie-regular;
+    src: url("~@/style/fonts/Charlie-Regular.woff");
+}
+
+.bold-font {
+    font-family: "segoe-ui-bold";
+}

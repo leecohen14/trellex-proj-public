@@ -1,0 +1,24 @@
+.file-name-menu{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 12px 12px;
+    box-sizing: border-box;
+
+    label{
+        font-size: 13px;
+        margin-top: 8px;
+        color:$secondaryTitle;
+    }
+    input{
+        @include primaryInput;
+        width: 90%;
+        margin-bottom: 12px;
+        color: $textClr;
+    }
+
+    .update-btn{
+        @include primaryBtn;
+        width: 95px;
+        height: 32px;
+    }
+}

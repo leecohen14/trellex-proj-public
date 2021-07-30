@@ -1,0 +1,65 @@
+.members-menu {
+    margin: 10px;
+
+    h4 {
+        font-size: 12px;
+        color: $secondaryTitle;
+        margin-bottom: 12px;
+    }
+    input {
+        box-shadow: inset 0 0 0 2px #dfe1e6;
+        background-color: #fafbfc;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        width: 258px;
+        padding: 8px 12px;
+        margin: 4px 0 12px;
+        color: $secondaryTitle;
+
+        &::placeholder {
+            color: $secondaryTitle;
+        }
+
+        &:hover:not(:focus) {
+            background-color: #ebecf0;
+        }
+
+        &:focus {
+            box-shadow: inset 0 0 0 2px $boxShadowMain;
+        }
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        padding: 2px;
+        border-radius: 3px;
+        font-size: 15px;
+        width: 282px;
+        @include hover-supported {
+            background-color: $secondaryBtnsGray;
+            cursor: pointer;
+        }
+
+        .check {
+            position: absolute;
+            left: 175px;
+
+            :first-child {
+                font-size: 10px;
+                position: absolute;
+                top: 4px;
+                right: -100px;
+            }
+        }
+    }
+
+    .user-img {
+        height: 32px;
+        width: 32px;
+        border-radius: 50px;
+        margin-right: 8px;
+    }
+}

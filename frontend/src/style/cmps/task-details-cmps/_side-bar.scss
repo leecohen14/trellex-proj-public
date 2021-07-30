@@ -1,0 +1,52 @@
+.details-side-bar {
+    position: relative;
+    width: 162px;
+
+    .head-lines {
+        color: $secondaryTitle;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        line-height: 16px;
+        margin-top: 16px;
+        text-transform: uppercase;
+        line-height: 20px;
+        margin-bottom: -4px;
+    }
+
+    .option {
+        position: relative;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-size: 14px;
+        background-color: rgba(9, 30, 66, 0.04);
+        border: none;
+        border-radius: 3px;
+        width: 100%;
+        height: 32px;
+        padding: 6px 12px;
+        margin-top: 8px;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        @include hover-supported {
+            background-color: rgba(9, 30, 66, 0.08);
+        }
+    }
+
+    .menu {
+        position: absolute;
+        right: -10px;
+        z-index: 50;
+    }
+
+    img {
+        height: 14px;
+        width: 14px;
+    }
+
+    .Cover-menu {
+        // for the cover image that is balck colored
+        filter: invert(13%) sepia(97%) saturate(527%) hue-rotate(180deg) brightness(91%) contrast(94%);
+    }
+}

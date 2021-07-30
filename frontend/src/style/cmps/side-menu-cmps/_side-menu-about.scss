@@ -1,0 +1,112 @@
+.side-menu-about {
+    // display: flex;
+    padding: 0 5px;
+
+    .back-btn {
+        position: absolute;
+        top: 18px;
+        z-index: 44;
+        width: 15px;
+        margin-right: 5px;
+        padding: 0;
+        left: 24px;
+        img {
+            height: 15px;
+            width: 30px;
+        }
+        @include hover-supported {
+            background-color: unset;
+        }
+    }
+
+    .board-admins {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px 0;
+        margin-bottom: 4px;
+
+        h1 {
+            font-size: 17px;
+            padding: 8px 10px;
+        }
+
+        .board-admins-header {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            height: 18px;
+        }
+    }
+    .desc-container {
+        h1 {
+            font-size: 17px;
+            padding: 8px 10px;
+        }
+        .desc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        textarea {
+            display: block;
+            background-color: rgba(9, 30, 66, 0.04);
+            border-radius: 3px;
+            border: none;
+            box-shadow: none;
+            width: 324px;
+            min-height: 56px !important;
+            box-sizing: border-box;
+            font-size: 15px;
+            padding: 8px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: $textClr;
+
+            transition: all 0.2s;
+            resize: none;
+
+            &::placeholder {
+                color: $textClr;
+                font-size: 14px;
+            }
+
+            &:focus {
+                background-color: #fff;
+                outline: none;
+                box-shadow: inset 0 0 0 2px $boxShadowMain;
+                min-height: 104px !important;
+
+                &::placeholder {
+                    color: $secondaryTitle;
+                    font-weight: 600;
+                }
+                @include hover-supported {
+                    background-color: #fff;
+                }
+            }
+            @include hover-supported {
+                background-color: rgba(9, 30, 66, 0.08);
+                cursor: pointer;
+            }
+        }
+        > .controls-btns {
+            display: flex;
+            align-items: center;
+            margin-top: 3px;
+            margin-bottom: 22px;
+
+            > .save-btn {
+                @include primaryBtn;
+            }
+            > .cancel-btn {
+                @include xBtn;
+            }
+        }
+
+        img {
+            height: 20px;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.side-menu-background {
+    height: 100%;
+    display: flex;
+    padding-top: 12px;
+    gap: 6px;
+
+    .back-btn {
+        position: absolute;
+        top: 18px;
+        z-index: 44;
+        width: 15px;
+        margin-right: 5px;
+        padding: 0;
+        left: 24px;
+        img {
+            height: 15px;
+            width: 30px;
+        }
+        @include hover-supported {
+            background-color: unset;
+        }
+    }
+
+    .photos-container {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .photos {
+            > img {
+                height: 96px;
+                width: 152px;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    .colors-container {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .colors {
+            > img {
+                height: 96px;
+                width: 152px;
+                border-radius: 8px;
+            }
+        }
+    }
+}

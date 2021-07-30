@@ -1,0 +1,124 @@
+.board-header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 30px;
+    top: 48px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px 4px;
+    user-select: none;
+
+    z-index: 1;
+
+    .border-divider {
+        height: 16px;
+        border-left: 1px solid hsla(0, 0%, 100%, 0.24);
+        margin-left: 5px;
+        padding-right: 5px;
+
+        @include mobile-size-display;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    > .left-board-header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+
+        .fav {
+            font-family: icomoon;
+            width: 20px;
+
+            &.starred {
+                color: #f2d600;
+                background-color: rgba(0, 0, 0, 0.24);
+            }
+            @include mobile-size-display;
+        }
+
+        > h1 {
+            background-color: hsla(0, 0%, 100%, 0.24);
+            font-size: 20px;
+            line-height: 32px;
+            padding: 0 8px;
+            font-family: "segoe-ui-bold";
+            border-radius: 3px;
+            color: #ffffff;
+            cursor: pointer;
+            @include hover-supported {
+                background-color: #fffff750;
+            }
+        }
+
+        > input {
+            border: none;
+            background-color: hsla(0, 0%, 100%, 0.24);
+            font-size: 20px;
+            line-height: 32px;
+            padding: 0 4px 0 10px;
+            font-family: "segoe-ui-bold";
+            border-radius: 3px;
+            color: #ffffff;
+            cursor: pointer;
+            width: unset;
+
+            @include hover-supported {
+                background-color: #fffff750;
+            }
+            &:focus {
+                outline: none;
+                background-color: #ffffff;
+                box-shadow: inset 0 0 0 2px $boxShadowMain;
+                color: #627087;
+            }
+        }
+        .users {
+            display: flex;
+            gap: 3px;
+        }
+        > .invite-btn {
+            @include tablet-size-display;
+        }
+        .members-invite {
+            background-color: white;
+            border-radius: 3px;
+        }
+    }
+
+    .right-board-header {
+        display: flex;
+        gap: 5px;
+
+        .board-header-btn {
+            img {
+                filter: invert(243%) sepia(100%) saturate(732%) hue-rotate(166deg) brightness(864%) contrast(101%);
+
+                height: 26px;
+                margin-right: 9px;
+            }
+        }
+        > .statistics-btn {
+            @include tablet-size-display;
+        }
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(0, 0%, 100%, 0.24);
+        color: white;
+        border-radius: 3px;
+        height: 32px;
+        padding: 0 15px;
+
+        @include hover-supported {
+            cursor: pointer;
+            background-color: hsla(0, 0%, 100%, 0.32);
+        }
+    }
+}

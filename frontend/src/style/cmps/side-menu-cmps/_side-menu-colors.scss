@@ -1,0 +1,34 @@
+.menu-colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+    padding-top: 13px;
+    padding-left: 12px;
+
+    .back-btn {
+        position: absolute;
+        top: 18px;
+        z-index: 44;
+        width: 15px;
+        margin-right: 5px;
+        padding: 0;
+        img {
+            height: 15px;
+            width: 30px;
+        }
+        @include hover-supported {
+            background-color: unset;
+        }
+    }
+    > * {
+        width: 141px;
+        height: 96px;
+        border-radius: 8px;
+        cursor: pointer;
+
+        @include hover-supported {
+            box-shadow: inset 100px 100px 100px 100px rgba(255, 255, 255, 0.267);
+        }
+    }
+}

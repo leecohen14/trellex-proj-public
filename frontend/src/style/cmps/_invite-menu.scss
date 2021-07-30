@@ -1,0 +1,68 @@
+.invite-menu{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    background-color: #fff;
+    margin-top: 458px;
+    margin-left: 320px;
+    color:black;
+    border-radius: 3px;
+    padding: 2px 10px;
+    width: 304px;
+    height: 412px;
+    
+
+    .invite-menu-header {
+
+        > h1 {
+            color: #5e6c84;
+            margin-left: 14px;
+            font-weight: lighter;
+            padding: 10px;
+        }
+
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.212);
+        justify-content: center;
+        text-align: center;
+
+        img {
+            position: absolute;
+            right: 0;
+            margin-right: 20px;
+            height: 10px;
+            filter: invert(43%) sepia(37%) saturate(276%) hue-rotate(179deg) brightness(89%) contrast(91%);
+        }
+    }
+
+    main {
+        .element-input {
+            // @include primaryInput;
+            margin-top: 10px;
+            padding: 10px 10px;
+            width: 280px;
+
+            &::placeholder {
+                color: #5e6c8480;
+            }
+        }
+        
+        > button {
+            @include primaryBtn;
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 34px;
+            padding: 20px 12px;
+            margin-bottom: 10px;
+            font-weight: lighter;
+            font-size: 17px;
+        }
+    }
+
+}   

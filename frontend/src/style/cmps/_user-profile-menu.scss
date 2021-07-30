@@ -1,0 +1,60 @@
+.user-profile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    box-shadow: unset;
+    width: 290px;
+    padding: 3px;
+    top: 45px;
+    right: 0;
+
+    z-index: 100;
+
+    > section,
+    main,
+    footer {
+        box-sizing: border-box;
+        padding: 0 0 10px;
+        margin: 0 7px 10px;
+
+        > h5 {
+            color: #091e42;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 7px 0;
+
+            cursor: pointer;
+
+            @include hover-supported {
+                background-color: #091e420a;
+                box-shadow: -20px 0px 0px 0px #091e420a, 20px 0px 0px 0px #091e420a;
+            }
+        }
+    }
+
+    > section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid #091e4221;
+
+        > * {
+            display: inline;
+        }
+    }
+
+    > main {
+        display: flex;
+        flex-direction: column;
+
+        border-bottom: 1px solid $secondaryGray;
+    }
+
+    > footer {
+        display: flex;
+        flex-direction: column;
+
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,39 @@
+.members-summary {
+    .menu {
+        position: absolute;
+        right: 382px;
+        top: 134px;
+    }
+
+    .sum-h {
+        color: $secondaryTitle;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+
+    .members-imgs {
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+
+        .sum-img {
+            margin: 2px;
+        }
+
+        .add-member {
+            display: flex;
+            align-items: center;
+            background-color: rgba(9, 30, 66, 0.04);
+            border-radius: 50%;
+            height: 32px;
+
+            img {
+                filter: invert(6%) sepia(5%) saturate(9407%) hue-rotate(1514.3deg) brightness(0%) contrast(0%);
+            }
+            @include hover-supported {
+                background-color: $secondaryBtnsGray;
+            }
+        }
+    }
+}
